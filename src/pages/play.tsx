@@ -26,7 +26,7 @@ const Play: React.FC = () => {
       style={{
         backgroundColor: "#000",
         color: "#a47124",
-        height: "100vh", // Centralização vertical total
+        height: "100vh", 
       }}
     >
       <div

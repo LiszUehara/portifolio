@@ -6,14 +6,19 @@ const Hello: React.FC = () => {
   const router = useRouter();
   const { user } = router.query;
 
+  const handleContinue = () => {
+    // Redireciona para a página /sobre
+    router.push("/sobre");
+  };
+
   return (
     <div
       className="flex flex-col items-center justify-center min-h-screen"
       style={{
-        backgroundColor: "#1a1a1a", // Preto elegante
+        backgroundColor: "#1a1a1a", 
         backgroundImage: `radial-gradient(circle, rgba(255,215,0,0.1) 1px, transparent 1px)`,
         backgroundSize: "30px 30px",
-        color: "#d4af37", // Dourado
+        color: "#d4af37", 
       }}
     >
       <div className="bg-black bg-opacity-70 rounded-lg shadow-xl p-10 text-center border border-yellow-600 max-w-lg">
@@ -44,14 +49,14 @@ const Hello: React.FC = () => {
           {/* VS image */}
           <div className="flex items-center justify-center">
             <Image
-              src="/vs.png" // imagem no public/vs.png
+              src="/vs.png" 
               alt="Versus"
               width={60}
               height={60}
             />
           </div>
 
-          {/* User */}
+          
           <div className="flex flex-col items-center">
             <div
               className="rounded-full w-20 h-20 flex items-center justify-center text-3xl font-bold shadow-md"
@@ -67,7 +72,7 @@ const Hello: React.FC = () => {
           Vamos começar? Clique no botão abaixo para continuar.
         </p>
         <button
-          onClick={() => alert("🚀 Próxima etapa em construção...")}
+          onClick={handleContinue}
           className="mt-6 bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-8 rounded-full transition duration-300 shadow-lg"
         >
           Continuar

@@ -29,7 +29,7 @@ const Invite: React.FC = () => {
         <>
           <h2 className="text-4xl mb-4 font-cursive">🎀 Quer jogar comigo?</h2>
           <button
-            onClick={() => router.push("/sobre")}
+            onClick={() => router.push("/play")}
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg text-xl transition duration-300"
           >
             ▶️ Play
